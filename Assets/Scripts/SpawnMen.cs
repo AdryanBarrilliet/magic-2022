@@ -25,10 +25,16 @@ namespace LP.SpawnMenNewInput
         private void SpawnAtMousePos()
         {
            // Debug.Log(-button.ReadValue<float>() * .05f);
-            if (Mouse.current.leftButton.wasPressedThisFrame)
+            if (button.WasPerformedThisFrame() ||Mouse.current.leftButton.wasPressedThisFrame)
             {
-                 
-                Ray ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+                Ray ray;
+
+                if (Application.isEditor)
+                    ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+                else
+                    ray = cam.ViewportPointToRay(new Vector2(0.5f, 0.5f));
+
                 RaycastHit hit;
 
                 if (Physics.Raycast(ray, out hit))
