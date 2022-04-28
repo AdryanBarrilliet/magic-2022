@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/Blossom.cs.meta
-guid: 876624ef42e10ff4b90703997e3f0748
-========
 guid: cc5e6d17fbf53450d8cff64e69fea130
->>>>>>>> upstream/main:Assets/Scripts/DebugInput/DragAndDrop/DragAndDrop.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
