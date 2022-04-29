@@ -85,7 +85,7 @@ public class Branch : MonoBehaviour {
             if (currentAmount >= MAX) {
                 animate = false;
                 material.SetFloat(AMOUNT, MAX);
-                MeshManager.instance.addMesh(transform, meshFilter.mesh, meshRenderer.sharedMaterial);
+               MeshManager.instance.addMesh(transform, meshFilter.mesh, meshRenderer.sharedMaterial);
             }
         }
 

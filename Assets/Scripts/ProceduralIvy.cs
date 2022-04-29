@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ProceduralIvy : MonoBehaviour {
+
+
+    public InputAction button;
 
     public Camera cam;
     [Space]
@@ -21,19 +25,31 @@ public class ProceduralIvy : MonoBehaviour {
     public Blossom flowerPrefab;
     [Space]
     public bool wantBlossoms;
-
     int ivyCount = 0;
 
     void Update() {
+
+        button.Enable();
 
         if (Input.GetKeyUp(KeyCode.Space)) {
             // call this method when you are ready to group your meshes
             combineAndClear();
         }
 
-        if (Input.GetMouseButtonDown(0)) {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        if (Input.GetMouseButtonDown(0) || button.WasPerformedThisFrame()) {
+
+            Ray ray;
+
+            if (Application.isEditor)
+                ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            else
+                ray = cam.ViewportPointToRay(new Vector2(0.5f, 0.5f));
+
             RaycastHit hit;
+
+           /* Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;*/
+
             if (Physics.Raycast(ray, out hit, 100)) {
                 createIvy(hit);
             }
