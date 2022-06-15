@@ -12,6 +12,9 @@ namespace LP.SpawnMenNewInput
         List<GameObject> prefabList = new List<GameObject>();
         [SerializeField] GameObject Prefab1 = null;
         [SerializeField] GameObject Prefab2 = null;
+        [SerializeField] GameObject Prefab3 = null;
+        [SerializeField] GameObject Prefab4 = null;
+        [SerializeField] GameObject Prefab5 = null;
         public GameObject player;
 
         private Camera cam = null;
@@ -26,6 +29,9 @@ namespace LP.SpawnMenNewInput
         {
             prefabList.Add(Prefab1);
             prefabList.Add(Prefab2);
+            prefabList.Add(Prefab3);
+            prefabList.Add(Prefab4);
+            prefabList.Add(Prefab5);
 
             button.Enable();
             SpawnAtMousePos();
@@ -33,8 +39,8 @@ namespace LP.SpawnMenNewInput
 
         private void SpawnAtMousePos()
         {
-           // Debug.Log(-button.ReadValue<float>() * .05f);
-            if (button.WasPerformedThisFrame() || Mouse.current.leftButton.wasPressedThisFrame)
+            // Debug.Log(-button.ReadValue<float>() * .05f); || Mouse.current.leftButton.wasPressedThisFrame
+            if (button.WasPerformedThisFrame() )
             {
 
                 Ray ray;
@@ -46,7 +52,7 @@ namespace LP.SpawnMenNewInput
 
                 RaycastHit hit;
 
-                int prefabIndex = UnityEngine.Random.Range(0, 3);
+                int prefabIndex = UnityEngine.Random.Range(0, 5);
 
                 if (Physics.Raycast(ray, out hit))
                 {

@@ -20,6 +20,12 @@
         },
         {
             "m_Id": "d6842307561f4cc987c355e1717858e9"
+        },
+        {
+            "m_Id": "529d5829dbd34b2383741ae951d21fb1"
+        },
+        {
+            "m_Id": "abb18dbff959466bae4e306c04dbc3f3"
         }
     ],
     "m_Keywords": [],
@@ -2032,6 +2038,30 @@
 }
 
 {
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "529d5829dbd34b2383741ae951d21fb1",
+    "m_Guid": {
+        "m_GuidSerialized": "d82cb6db-6d38-4dd4-90d1-de0f3315a31b"
+    },
+    "m_Name": "_ColorEnd",
+    "m_DefaultReferenceName": "Color_529d5829dbd34b2383741ae951d21fb1",
+    "m_OverrideReferenceName": "_ColorEnd",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+    },
+    "m_ColorMode": 0
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.GradientNoiseNode",
     "m_ObjectId": "541414f5d98e4333832a2b97267bdc77",
@@ -3169,6 +3199,30 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "abb18dbff959466bae4e306c04dbc3f3",
+    "m_Guid": {
+        "m_GuidSerialized": "a6be1931-b82c-492a-b59c-64e3a1eeb673"
+    },
+    "m_Name": "_Color",
+    "m_DefaultReferenceName": "Color_abb18dbff959466bae4e306c04dbc3f3",
+    "m_OverrideReferenceName": "_Color",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+    },
+    "m_ColorMode": 0
 }
 
 {

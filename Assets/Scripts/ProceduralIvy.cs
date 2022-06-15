@@ -32,11 +32,11 @@ public class ProceduralIvy : MonoBehaviour {
         button.Enable();
 
         if (Input.GetKeyUp(KeyCode.Space)) {
-            // call this method when you are ready to group your meshes
+            // call this method when you are ready to group your meshes || button.WasPerformedThisFrame()
             combineAndClear();
         }
 
-        if (Input.GetMouseButtonDown(0) || button.WasPerformedThisFrame()) {
+        if (button.WasPerformedThisFrame()) {
 
             Ray ray;
 
